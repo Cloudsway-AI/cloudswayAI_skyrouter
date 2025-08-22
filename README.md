@@ -1,6 +1,6 @@
-## sky-router
+## cloudswayai_skyrouter
 
-**Author:** cloudsway
+**Author:** cloudswayAI
 **Version:** 0.0.1
 **Type:** model
 

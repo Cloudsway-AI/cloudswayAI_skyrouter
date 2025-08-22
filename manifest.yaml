@@ -1,15 +1,13 @@
 version: 0.0.1
 type: plugin
 author: cloudsway
-name: sky-router
+name: cloudswayai_skyrouter
 label:
-  en_US: sky-router
-  ja_JP: sky-router
-  zh_Hans: sky-router
-  pt_BR: sky-router
+  en_US: cloudswayai_skyrouter
+  zh_Hans: cloudswayai_skyrouter
 description:
-  en_US: test
-  zh_Hans: test
+  en_US: A model plugin for CloudswayAI SkyRouter
+  zh_Hans: 一个用于CloudswayAI SkyRouter的模型插件
 icon: icon.png
 resource:
   memory: 268435456
@@ -19,7 +17,7 @@ resource:
       llm: true
 plugins:
   models:
-    - provider/sky-router.yaml
+    - provider/skyrouter.yaml
 meta:
   version: 0.0.1
   arch:
