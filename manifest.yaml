@@ -3,8 +3,8 @@ type: plugin
 author: cloudsway
 name: cloudswayai_skyrouter
 label:
-  en_US: cloudswayai_skyrouter
-  zh_Hans: cloudswayai_skyrouter
+  en_US: Cloudswayai Skyrouter
+  zh_Hans: Cloudswayai Skyrouter
 description:
   en_US: A model plugin for CloudswayAI SkyRouter
   zh_Hans: 一个用于CloudswayAI SkyRouter的模型插件

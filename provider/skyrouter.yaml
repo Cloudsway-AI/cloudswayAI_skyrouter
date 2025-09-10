@@ -1,6 +1,6 @@
 provider: cloudswayai_skyrouter
 label:
-  en_US: "CloudswayAI-SkyRouter"
+  en_US: "CloudswayAI SkyRouter"
 description:
   en_US: "Models provided by CloudswayAI SkyRouter."
   zh_Hans: "CloudswayAI SkyRouter 提供的模型。"
