@@ -12,7 +12,7 @@ model_properties:
   mode: chat
   context_size: 200000
 parameter_rules:
-  - name: thinking
+  - name: enable_thinking
     label:
       zh_Hans: 推理模式
       en_US: Thinking Mode
@@ -22,13 +22,12 @@ parameter_rules:
     help:
       zh_Hans: 控制模型的推理能力。启用时，temperature、top_p和top_k将被禁用。
       en_US: Controls the model's thinking capability. When enabled, temperature, top_p and top_k will be disabled.
-  - name: thinking_budget
+  - name: reasoning_budget
     label:
       zh_Hans: 推理预算
-      en_US: Thinking Budget
+      en_US: Reasoning Budget
     type: int
-    default: 1024
-    min: 0
+    min: 1024
     max: 128000
     required: false
     help:
@@ -75,16 +74,6 @@ parameter_rules:
     required: false
     min: 1024
     max: 64000
-  - name: exclude_reasoning_tokens
-    label:
-      zh_Hans: 隐藏思考过程
-      en_US: Hide the thought process
-    type: boolean
-    default: true
-    help:
-      zh_Hans: 是否隐藏思考过程。
-      en_US: Whether to hide the thought process.
-    required: false
 pricing:
   input: "3.00"
   output: "15.00"

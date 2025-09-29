@@ -44,16 +44,6 @@ parameter_rules:
       zh_Hans: 仅从每个后续标记的前 K 个选项中采样。
       en_US: Only sample from the top K options for each subsequent token.
     required: false
-  - name: exclude_reasoning_tokens
-    label:
-      zh_Hans: 隐藏思考过程
-      en_US: Hide the thought process
-    type: boolean
-    default: false
-    help:
-      zh_Hans: 是否隐藏思考过程。
-      en_US: Whether to hide the thought process.
-    required: false
 pricing:
   input: "0.40"
   output: "2.00"

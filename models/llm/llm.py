@@ -92,18 +92,11 @@ class SkyrouterLargeLanguageModel(OAICompatLargeLanguageModel, _Common):
         reasoning_params = {}
         reasoning_budget = model_parameters.pop('reasoning_budget', None)
         enable_thinking = model_parameters.pop('enable_thinking', None)
-        if enable_thinking == 'dynamic':
-            reasoning_budget = -1
-        if reasoning_budget is not None:
-            reasoning_params['max_tokens'] = reasoning_budget
-        reasoning_effort = model_parameters.pop('reasoning_effort', None)
-        if reasoning_effort is not None:
-            reasoning_params['effort'] = reasoning_effort
-        exclude_reasoning_tokens = model_parameters.pop('exclude_reasoning_tokens', None)
-        if exclude_reasoning_tokens is not None:
-            reasoning_params['exclude'] = exclude_reasoning_tokens
-        if reasoning_params:
-            model_parameters['reasoning'] = reasoning_params
+        if enable_thinking:
+            reasoning_params['type'] = 'enabled'
+            if reasoning_budget is not None:
+                reasoning_params['budget_tokens'] = reasoning_budget
+            model_parameters['thinking'] = reasoning_params
         return self._generate(model, credentials, prompt_messages, model_parameters, tools, stop, stream, user)
 
     def _generate(
